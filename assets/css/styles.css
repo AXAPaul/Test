@@ -1,0 +1,124 @@
+/* Styles minimalistes inspirés d'une palette AXA */
+:root {
+  --axa-blue: #0033a0;
+  --axa-red: #e4002b;
+  --bg: #f7f9fc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.axa-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.axa-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  margin: 0;
+  color: var(--axa-blue);
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-left: 0.25rem;
+}
+.main-nav a[aria-current="page"],
+.main-nav a:hover {
+  background: var(--axa-blue);
+  color: #fff;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+h2 { margin-top: 0; }
+
+.uploader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: var(--axa-blue);
+  border-color: var(--axa-blue);
+  color: #fff;
+}
+.btn.danger {
+  background: var(--axa-red);
+  border-color: var(--axa-red);
+  color: #fff;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.feedback {
+  min-height: 1.25rem;
+  color: var(--muted);
+}
+.hint { color: var(--muted); font-size: 0.9rem; }
+
+.toolbar { display: flex; justify-content: flex-end; margin-bottom: 0.5rem; }
+
+.table-wrap { overflow-x: auto; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.table thead th { background: #f1f5f9; }
+
+.empty-state {
+  padding: 0.75rem;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .uploader { flex-direction: column; align-items: stretch; }
+  .toolbar { justify-content: stretch; }
+}
+

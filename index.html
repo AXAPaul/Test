@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plateforme AXA - Téléversement</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="axa-header">
+      <div class="container header-inner">
+        <h1 class="brand">AXA</h1>
+        <nav class="main-nav">
+          <a href="index.html" aria-current="page">Téléverser</a>
+          <a href="historique.html">Historique</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Téléverser un document</h2>
+        <p>Sélectionnez un fichier depuis votre machine pour l'ajouter à l'historique local.</p>
+
+        <div class="uploader">
+          <input type="file" id="fileInput" />
+          <button id="uploadBtn" class="btn primary">Envoyer</button>
+        </div>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        <p class="hint">Astuce: l'historique est stocké côté navigateur (localStorage), aucune donnée n'est envoyée côté serveur.</p>
+      </section>
+    </main>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/upload.js"></script>
+  </body>
+  </html>
+
